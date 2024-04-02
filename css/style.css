@@ -34,6 +34,8 @@ section {
   padding-bottom: 9rem;
 }
 
-h1 {
-  font-size: 3rem;
+.title {
+  font-weight: normal;
+  font-size: 4rem;
+  text-align: right;
 }
