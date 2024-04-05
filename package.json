@@ -1,0 +1,14 @@
+{
+  "name": "hermittrust",
+  "version": "1.0.0",
+  "private": "true",
+  "repository": "https://github.com/greenthera/hermittrust.git",
+  "author": "Greenthera <greenthera@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build:css": "sass ./theme/scss/bootstrap.scss ./theme/css/bootstrap.min.css --style compressed"
+  },
+  "dependencies": {
+    "sass": "^1.74.1"
+  }
+}

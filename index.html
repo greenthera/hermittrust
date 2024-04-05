@@ -1,25 +1,750 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>द हर्मिट ट्रस्ट - Monastery in Yol</title>
-    <meta description="Monastery in Yol" />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://hermittrust.com" />
-    <meta property="og:title" content="द हर्मिट ट्रस्ट" />
-    <meta property="og:description" content="Monastery in Yol" />
+    <meta charset="utf-8" />
+    <title>
+      The Hermit Charitable Trust | द हर्मिट चेरिटेबल ट्रस्ट - Monastery in Yol
+    </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta
-      property="og:image"
-      content="https://lh5.googleusercontent.com/grQ7nYcxBx_qgrOp1_9Y3Jzv1ymOet4EpxsbWrPiLL41z41UXExNQ6lkkvn_ahYwBFsPTHnh"
+      content="The Hermit Charitable Trust | द हर्मिट चेरिटेबल ट्रस्ट"
+      name="title"
     />
-    <meta property="og:image:width" content="314" />
-    <meta property="og:image:height" content="176" />
+    <meta content="Monastery in Yol" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
   </head>
+
   <body>
-    <header><h1 class="title">The Hermit Charitable Trust</h1></header>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      ></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-white sticky-top">
+      <div class="container">
+        <nav
+          class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0"
+          id="mainNav"
+        >
+          <a href="index.html" class="navbar-brand">
+            <h4>The Hermit Charitable Trust</h4>
+          </a>
+          <button
+            type="button"
+            class="navbar-toggler ms-auto me-0"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto">
+              <a href="#about" class="nav-item nav-link">About</a>
+              <a href="#values" class="nav-item nav-link">Values</a>
+              <a href="#activities" class="nav-item nav-link">Activities</a>
+              <a href="#contact" class="nav-item nav-link">Contact</a>
+            </div>
+            <div class="border-start ps-4 d-none">
+              <button type="button" class="btn btn-sm p-0">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid px-0 mb-5" style="max-height: 100vh">
+      <div id="header-carousel" class="carousel slide carousel-fade">
+        <div class="carousel-inner position-relative"></div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#header-carousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#header-carousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- About Start -->
+    <div class="container-xxl py-5" id="about">
+      <div class="container">
+        <div class="row g-5 d-flex align-items-center">
+          <div
+            class="col-lg-5 wow fadeIn d-flex justify-content-center"
+            data-wow-delay="0.1s"
+          >
+            <img class="img-fluid rounded-3" src="img/about.png" alt="" />
+          </div>
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div class="section-title">
+              <p class="fs-5 fw-medium fst-italic text-primary">About Us</p>
+              <h1 class="display-6">The Hermit Charitable Trust</h1>
+            </div>
+            <p class="mb-4">
+              The Hermit Charitable Trust (the Trust), a non-profit
+              non-commercial organization registered at Dharamsala, HP, is
+              active since 2008 in a small mountain village on the Dhauladhar
+              range of Himalayas near Dharamsala, Himachal Pradesh.
+            </p>
+            <p class="mb-4">
+              It is established fundamentally to felicitate the spiritual growth
+              of aspirants associated with the organization regardless of sex,
+              caste, creed or religion. It is a secular organization solely
+              devoted to the spiritual growth of individuals and through
+              individuals, of society at large. It offers its services free of
+              any monetary consideration. The Trust does not preach; it does not
+              propagate; it only felicitates.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Events Start -->
+    <div class="container-fluid event py-5 my-5" id="events">
+      <div class="container py-5">
+        <div
+          class="section-title text-center mx-auto wow fadeInUp"
+          data-wow-delay="0.1s"
+          style="max-width: 500px"
+        >
+          <p class="fs-5 fw-medium fst-italic text-primary">Events</p>
+          <h1 class="display-6">Spreading happiness & love</h1>
+        </div>
+        <div
+          class="owl-carousel event-carousel wow fadeInUp"
+          data-wow-delay="0.5s"
+        >
+          <a
+            target="_blank"
+            href="https://posts.gle/zXkmY4"
+            class="d-block event-item rounded"
+          >
+            <img src="img/e1.jpg" alt="" class="rounded-3" />
+            <div
+              class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4"
+            >
+              <h4 class="text-primary">Bottle Painting Workshop</h4>
+              <span class="text-body"
+                >A bottle painting workshop for the girls of Nonkut was
+                organised by Sadhvi Deepika in collaboration with Avani
+                Pandya.</span
+              >
+            </div>
+          </a>
+          <a
+            target="_blank"
+            href="https://posts.gle/bxb9Jf"
+            class="d-block event-item rounded"
+          >
+            <img src="img/e2.jpg" alt="" class="rounded-3" />
+            <div
+              class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4"
+            >
+              <h4 class="text-primary">Motivational Speeches</h4>
+              <span class="text-body"
+                >प्रधान मंत्री कौशल विकास केंद्र, पालमपुर के अधिकारी श्री धीरज
+                ठाकुर एवं श्री जितेंद्र तिवारी आश्रम में गाँव के बच्चों को
+                शिक्षण योजनाओं के बारे मे अवगत कराते हुए.</span
+              >
+            </div>
+          </a>
+          <a
+            href="https://posts.gle/5yxHCe"
+            target="_blank"
+            class="d-block event-item rounded"
+          >
+            <img src="img/e3.jpg" alt="" class="rounded-3" />
+            <div
+              class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4"
+            >
+              <h4 class="text-primary">Annual Function</h4>
+              <span class="text-body"
+                >Annual function by kids being attended by some of their parents
+                & guests. 02.06.2019</span
+              >
+            </div>
+          </a>
+          <a
+            href="https://posts.gle/DbGwp4"
+            target="_blank"
+            class="d-block event-item"
+          >
+            <img src="img/e4.jpg" alt="" class="rounded-3" />
+            <div
+              class="rounded-3 bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4"
+            >
+              <h4 class="text-primary">Learning</h4>
+              <span class="text-body"
+                >Children of Narwana Govt Primary School learning mathematics
+                through games & aids.</span
+              >
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Events End -->
+
+    <!-- Values Start -->
+    <div class="container-xxl py-5" id="values">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <div class="row g-3">
+              <div class="col-6 text-end">
+                <img
+                  class="img-fluid bg-white w-100 mb-3 wow fadeIn rounded-3"
+                  data-wow-delay="0.1s"
+                  src="img/value-1.jpg"
+                  alt=""
+                />
+                <img
+                  class="img-fluid bg-white w-50 wow fadeIn rounded-3"
+                  data-wow-delay="0.2s"
+                  src="img/value-3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-6">
+                <img
+                  class="img-fluid bg-white w-50 mb-3 wow fadeIn rounded-3"
+                  data-wow-delay="0.3s"
+                  src="img/value-4.jpg"
+                  alt=""
+                />
+                <img
+                  class="img-fluid bg-white w-100 wow fadeIn rounded-3"
+                  data-wow-delay="0.4s"
+                  src="img/value-2.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div class="section-title">
+              <p class="fs-5 fw-medium fst-italic text-primary">Values</p>
+              <h1 class="display-6">Mission & Vision</h1>
+            </div>
+            <div class="row g-3 mb-4 d-flex align-items-center">
+              <div class="col-sm-4">
+                <img
+                  class="img-fluid bg-white w-100 rounded-3"
+                  src="img/value-5.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-sm-8">
+                <h5>Vision</h5>
+                <p class="mb-0">
+                  The Trust aims to help the aspirants attain the spiritual
+                  goals such as attainment self-knowledge, peace by living in
+                  harmony with the nature so as to ultimately be able to realize
+                  the essential unity of everything that exists.
+                </p>
+              </div>
+            </div>
+            <div class="border-top mb-4"></div>
+            <div class="row g-3 d-flex align-items-center">
+              <div class="col-sm-8">
+                <h5>Mission</h5>
+                <p class="mb-0">
+                  The Trust aims to help the aspirants (Sadhaka) achieve
+                  individual spiritual growth through the methods that each one
+                  chooses as well as that suits each one the best. The Trust
+                  advocates 1. living with the Nature and 2. helping other
+                  beings in the closest vicinity as much as and as long as those
+                  activities are conducive to pursuit of individual’s spiritual
+                  goals.
+                </p>
+              </div>
+              <div class="col-sm-4">
+                <img
+                  class="img-fluid bg-white w-100 rounded-3"
+                  src="img/value-6.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Values End -->
+
+    <!-- Activities Start -->
+    <div class="container-fluid activities my-5" id="activities">
+      <div class="container">
+        <div class="row g-0">
+          <div class="col-12 py-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="py-5">
+              <h1 class="display-6 mb-4 text-center">Activities</h1>
+              <h5 class="fw-normal lh-base fst-italic mb-5 text-center">
+                Past & Present Activities of the Trust
+              </h5>
+              <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                  <div class="d-flex">
+                    <div
+                      class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3"
+                    >
+                      1
+                    </div>
+                    <span class="text-dark"
+                      >The Trust has been providing accommodation along with all
+                      basic necessities on its premises to the inmate Sadhakas
+                      as well as visitors</span
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex">
+                    <div
+                      class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3"
+                    >
+                      2
+                    </div>
+                    <span class="text-dark"
+                      >The Trust has also promoted Women Empowerment and Skill
+                      Development Program through Mother’s Grace Women
+                      Empowerment Trust.</span
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex">
+                    <div
+                      class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3"
+                    >
+                      3
+                    </div>
+                    <span class="text-dark"
+                      >The Trust has been providing educational support to the
+                      children of local villages during post-school hours. Apart
+                      from tuitions in curriculum studies, the Trust also
+                      provides computer education, moral education, basic sports
+                      facilities, library etc.</span
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex">
+                    <div
+                      class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3"
+                    >
+                      4
+                    </div>
+                    <span class="text-dark"
+                      >The Trust runs Swami Timir Baran Scholarship program
+                      under which students belonging to the economic as well as
+                      socially weaker sections are provided with financial
+                      support to pursue higher studies or professional studies.
+                      At present the Trust has five students – 3 girls & 2 boys,
+                      all of whom belong to SC/ST categories – benefitting from
+                      the program.
+                    </span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex">
+                    <div
+                      class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3"
+                    >
+                      5
+                    </div>
+                    <span class="text-dark"
+                      >The Trust has organised several health promotion programs
+                      including health education, tobacco eradication & health
+                      services & distribution of free medicines in collaboration
+                      with the Health Promotion Program of Ramakrishna Mission
+                      Home of Service, Varanasi.</span
+                    >
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="d-flex">
+                    <div
+                      class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3"
+                    >
+                      6
+                    </div>
+                    <span class="text-dark"
+                      >The Trust has donated computers, laptop, tablets in
+                      several schools in the area. These schools are all
+                      government run primary, secondary or higher secondary
+                      schools such as Bagiarra, Rakkad, Badsar etc.</span
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex">
+                    <div
+                      class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3"
+                    >
+                      7
+                    </div>
+                    <span class="text-dark"
+                      >The Trust has also invited a team of professionals to
+                      provide counselling to the local students to pursue the
+                      higher studies.</span
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex">
+                    <div
+                      class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3"
+                    >
+                      8
+                    </div>
+                    <span class="text-dark"
+                      >The Trust also distributes motivational literature of
+                      Swami Vivekananda.</span
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex">
+                    <div
+                      class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3"
+                    >
+                      9
+                    </div>
+                    <span class="text-dark"
+                      >The Trust tries to support needy people by way of
+                      providing ration, woollen clothes, financial help for the
+                      medical treatment etc as and when it is urgently required
+                      and according to the resources available with the
+                      Trust.</span
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex">
+                    <div
+                      class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3"
+                    >
+                      10
+                    </div>
+                    <span class="text-dark"
+                      >The Trust also provides first aid, basic medicines in
+                      emergency situation, BP monitoring, SPO2 monitoring, etc
+                      to the local people. One of the inmates on the premise is
+                      trained in paramedics including child & women health.
+                    </span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex">
+                    <div
+                      class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3"
+                    >
+                      11
+                    </div>
+                    <span class="text-dark"
+                      >The Trust regularly distributes woollen clothes to the
+                      children enrolled in the Vikas program run by the Trust on
+                      its premise.</span
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex">
+                    <div
+                      class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3"
+                    >
+                      12
+                    </div>
+                    <span class="text-dark"
+                      >The Trust has also provided sewing machine etc for the
+                      livelihood of the poor.
+                    </span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex">
+                    <div
+                      class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3"
+                    >
+                      13
+                    </div>
+                    <span class="text-dark"
+                      >The Trust occasionally donates to monks & nuns also.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Activities End -->
+
+    <!-- Contact Start -->
+    <div class="container-xxl contact py-5" id="contact">
+      <div class="container">
+        <div
+          class="section-title text-center mx-auto wow fadeInUp"
+          data-wow-delay="0.1s"
+          style="max-width: 500px"
+        >
+          <p class="fs-5 fw-medium fst-italic text-primary">Contact Us</p>
+          <h1 class="display-6">You are always Welcomed</h1>
+        </div>
+        <div class="row g-5 mb-5">
+          <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.4s">
+            <div class="btn-square mx-auto mb-3">
+              <i class="fa fa-phone fa-2x text-white"></i>
+            </div>
+            <p class="mb-2">098572 22233</p>
+          </div>
+          <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.5s">
+            <div class="btn-square mx-auto mb-3">
+              <i class="fa fa-map-marker-alt fa-2x text-white"></i>
+            </div>
+            <p class="mb-2">Tehsil, Bagiarra, VPO- Kand Kardyana</p>
+            <p class="mb-2">Dist, Camp, Dharamshala, Yol</p>
+            <p class="mb-0">Himachal Pradesh 176052</p>
+          </div>
+        </div>
+        <div class="row g-5">
+          <div class="d-none col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <h3 class="mb-4">Reach out</h3>
+            <p class="mb-4">
+              It's a monastery and not a public place; however certain
+              philanthropic activities in the field of education are carried out
+              at the premises and around.
+            </p>
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="Your Name"
+                    />
+                    <label for="name">Your Name</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Your Email"
+                    />
+                    <label for="email">Your Email</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="subject"
+                      placeholder="Subject"
+                    />
+                    <label for="subject">Subject</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control"
+                      placeholder="Leave a message here"
+                      id="message"
+                      style="height: 120px"
+                    ></textarea>
+                    <label for="message">Message</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button
+                    class="btn btn-primary rounded-pill py-3 px-5"
+                    type="submit"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="h-100">
+              <iframe
+                class="w-100 rounded"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13512.037191301!2d76.4108856!3d32.1500477!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b52a038cf4c13%3A0xa338084bcc37eac3!2zVGhlIEhlcm1pdCBDaGFyaXRhYmxlIFRydXN0OiDgpKYg4KS54KSw4KWN4KSu4KS_4KSfIOCkmuClh-CksOCkv-Ckn-Clh-CkrOCksiDgpJ_gpY3gpLDgpLjgpY3gpJ8!5e0!3m2!1sen!2sin!4v1712326712113!5m2!1sen!2sin"
+                frameborder="0"
+                style="height: 100%; min-height: 500px; border: 0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-4 col-md-6 text-center">
+            <h4 class="text-primary">The Hermit Charitable Trust</h4>
+            <h4 class="text-primary mb-4">द हर्मिट चेरिटेबल ट्रस्ट</h4>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt text-primary me-3"></i>Tehsil,
+              Bagiarra, VPO- Kand Kardyana, Dist, Camp, Dharamshala, Yol,
+              Himachal Pradesh 176052
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope text-primary me-3"></i>info@example.com
+            </p>
+            <div class="d-none d-flex pt-3">
+              <a class="btn btn-square btn-primary rounded-circle me-2" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-square btn-primary rounded-circle me-2" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-square btn-primary rounded-circle me-2" href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-square btn-primary rounded-circle me-2" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center">
+            <h4 class="text-primary mb-4">Quick Links</h4>
+            <a class="btn btn-link text-center" href="#about">About</a>
+            <a class="btn btn-link text-center" href="#events">Events</a>
+            <a class="btn btn-link text-center" href="#values">Values</a>
+            <a class="btn btn-link text-center" href="#activities"
+              >Activities</a
+            >
+            <a class="btn btn-link text-center" href="#contact">Contact</a>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center">
+            <h4 class="text-primary mb-4">Hours</h4>
+            <p class="mb-1">Monday - Friday</p>
+            <h6 class="text-light">09:00 am - 12:00 pm</h6>
+            <p class="mb-1">Saturday</p>
+            <h6 class="text-light">09:00 am - 12:00 pm</h6>
+            <p class="mb-1">Sunday</p>
+            <h6 class="text-light">09:00 am - 12:00 pm</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy;
+            <a class="fw-medium" href="#">The Hermit Charitable Trust</a>, All
+            Right Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            Developed By
+            <a class="fw-medium" target="_blank" href="https://shivantra.com"
+              >Shivantra</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a
+      href="#"
+      class="d-none btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
     <script src="js/main.js"></script>
   </body>
 </html>
