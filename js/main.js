@@ -9,7 +9,8 @@
       }
     }, 1);
   };
-  spinner();
+  
+  // spinner();
 
   // Initiate the wowjs
   new WOW().init();
