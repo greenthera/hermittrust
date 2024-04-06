@@ -78,6 +78,9 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Google Recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
 
   <body>
@@ -610,14 +613,14 @@
           </div>
         </div>
         <div class="row g-5">
-          <div class="d-none col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
             <h3 class="mb-4">Reach out</h3>
             <p class="mb-4">
               It's a monastery and not a public place; however certain
               philanthropic activities in the field of education are carried out
               at the premises and around.
             </p>
-            <form>
+            <form onsubmit="return submitForm();">
               <div class="row g-3">
                 <div class="col-md-6">
                   <div class="form-floating">
@@ -626,6 +629,7 @@
                       class="form-control"
                       id="name"
                       placeholder="Your Name"
+                      required
                     />
                     <label for="name">Your Name</label>
                   </div>
@@ -637,6 +641,7 @@
                       class="form-control"
                       id="email"
                       placeholder="Your Email"
+                      required
                     />
                     <label for="email">Your Email</label>
                   </div>
@@ -648,6 +653,7 @@
                       class="form-control"
                       id="subject"
                       placeholder="Subject"
+                      required
                     />
                     <label for="subject">Subject</label>
                   </div>
@@ -659,22 +665,30 @@
                       placeholder="Leave a message here"
                       id="message"
                       style="height: 120px"
+                      required
                     ></textarea>
                     <label for="message">Message</label>
                   </div>
                 </div>
+                <div
+                  class="g-recaptcha"
+                  data-sitekey="6LdHcf4UAAAAAB-Wnyxif-TDWZSPlwrBuPH3KYQt"
+                  data-callback="enableSubmitBtn"
+                ></div>
                 <div class="col-12">
                   <button
                     class="btn btn-primary rounded-pill py-3 px-5"
                     type="submit"
+                    id="submitBtn"
                   >
                     Send Message
                   </button>
                 </div>
+                <div id="form-message" class="alert d-none"></div>
               </div>
             </form>
           </div>
-          <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
             <div class="h-100">
               <iframe
                 class="w-100 rounded"

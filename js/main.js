@@ -9,7 +9,7 @@
       }
     }, 1);
   };
-  
+
   // spinner();
 
   // Initiate the wowjs
@@ -109,3 +109,88 @@
     );
   }
 })(jQuery);
+
+const ids = ["name", "email", "subject", "message"];
+
+function getValueById(id) {
+  return document.getElementById(id).value;
+}
+
+function getFormValues() {
+  return ids.reduce(function (acc, i) {
+    acc[i] = getValueById(i);
+    return acc;
+  }, {});
+}
+
+function clearValues() {
+  ids.forEach((id) => {
+    document.getElementById(id).value = "";
+  });
+}
+
+function showNotification(msg, type = "success") {
+  const classes = {
+    success: "alert-success",
+    error: "alert-danger",
+  };
+
+  const messageEl = document.getElementById("form-message");
+  messageEl.classList.add(classes[type]);
+  messageEl.classList.remove("d-none");
+  messageEl.classList.add("d-block");
+  messageEl.innerHTML = msg;
+
+  setTimeout(function () {
+    messageEl.classList.remove("d-block");
+    messageEl.classList.add("d-none");
+  }, 2000);
+
+  setTimeout(function () {
+    messageEl.classList.remove(classes[type]);
+  }, 2500);
+}
+
+
+function enableSubmitBtn() {
+  document.getElementById("submitBtn").disabled = false;
+}
+
+function disableSubmitBtn() {
+  document.getElementById("submitBtn").disabled = true;
+}
+
+function submitForm() {
+  const { name, email, subject, message } = getFormValues();
+  if (!(name && email && subject && message)) {
+    showNotification("Name, email, subject and message are required", "error");
+    return;
+  }
+
+  var xhttp = new XMLHttpRequest();
+
+  const data = new FormData();
+  data.append("entry.1494288265", name);
+  data.append("entry.1928966834", email);
+  data.append("entry.1202903610", subject);
+  data.append("entry.1841566636", message);
+
+  const qs = [...data.entries()]
+    .map((x) => `${encodeURIComponent(x[0])}=${encodeURIComponent(x[1])}`)
+    .join("&");
+
+  xhttp.open(
+    "POST",
+    "https://docs.google.com/forms/d/e/1FAIpQLSeWUzhhelvpfTTeA_vUHTVjeDz95xwScIDBqEDZjcDnpQpXfg/formResponse?&submit=Submit?usp=pp_url&" +
+      qs,
+    true
+  );
+  xhttp.send();
+
+  showNotification("Your response is submitted. Thank You", "success");
+  grecaptcha.reset();
+  disableSubmitBtn();
+  clearValues();
+
+  return false;
+}
